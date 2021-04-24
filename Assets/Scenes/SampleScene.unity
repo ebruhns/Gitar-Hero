@@ -171,6 +171,8 @@ GameObject:
   m_Component:
   - component: {fileID: 103830667}
   - component: {fileID: 103830666}
+  - component: {fileID: 103830668}
+  - component: {fileID: 103830669}
   m_Layer: 0
   m_Name: strike_red
   m_TagString: Untagged
@@ -244,6 +246,79 @@ Transform:
   m_Father: {fileID: 3070067}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &103830668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103830665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd8c913e50a346a680bcdd9322384d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 103830666}
+  newSprite: {fileID: 21300000, guid: cef3c0b3fb53c6b4dbd1d03b9a60882d, type: 3}
+  originalSprite: {fileID: 21300000, guid: 631498775bafd90438135f2f3218ed6e, type: 3}
+--- !u!114 &103830669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103830665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 29489e04067254f53865cf89948fd48e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 498f2cd5-3f84-424b-844a-65c1562add89
+    m_ActionName: strike_green/press_green[/Keyboard/leftArrow,/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 103830668}
+        m_TargetAssemblyTypeName: Press_Red, Assembly-CSharp
+        m_MethodName: Onpress_red
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 689b1ece-ba4a-4e3e-9dba-644cd543627e
+    m_ActionName: strike_red/press_red[/Keyboard/upArrow,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a3909d82-6086-47dc-bb30-e70a0e58beee
+    m_ActionName: strike_yellow/New action[/Keyboard/downArrow,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
+    m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: strike_red
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &158282846
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,9 +389,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1296339621
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 3601b51f33857ce49bd611e9debc44db, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -396,7 +471,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1296339621
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ec73f66d5c1c0424790ea372715d9389, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -560,9 +635,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1296339621
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cef3c0b3fb53c6b4dbd1d03b9a60882d, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -922,6 +997,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1261169627}
   - component: {fileID: 1261169626}
+  - component: {fileID: 1261169629}
+  - component: {fileID: 1261169628}
   m_Layer: 0
   m_Name: strike_green
   m_TagString: Untagged
@@ -995,6 +1072,79 @@ Transform:
   m_Father: {fileID: 3070067}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1261169628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261169625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2a56ebc859045e68fbc5ffe2b9565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1261169626}
+  newSprite: {fileID: 21300000, guid: ec73f66d5c1c0424790ea372715d9389, type: 3}
+  originalSprite: {fileID: 21300000, guid: 7fe617cd2b86f8046a077d2d90e9e227, type: 3}
+--- !u!114 &1261169629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261169625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 29489e04067254f53865cf89948fd48e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1261169628}
+        m_TargetAssemblyTypeName: Press_Green, Assembly-CSharp
+        m_MethodName: Onpress_green
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 498f2cd5-3f84-424b-844a-65c1562add89
+    m_ActionName: strike_green/press_green[/Keyboard/leftArrow,/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 689b1ece-ba4a-4e3e-9dba-644cd543627e
+    m_ActionName: strike_red/press_red[/Keyboard/upArrow,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a3909d82-6086-47dc-bb30-e70a0e58beee
+    m_ActionName: strike_yellow/New action[/Keyboard/downArrow,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
+    m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: strike_green
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1335288200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1217,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b81e46d155d182f47b4a69e081cf87a6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1087,6 +1237,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1361363088}
   - component: {fileID: 1361363087}
+  - component: {fileID: 1361363089}
+  - component: {fileID: 1361363090}
   m_Layer: 0
   m_Name: strike_blue
   m_TagString: Untagged
@@ -1160,6 +1312,79 @@ Transform:
   m_Father: {fileID: 3070067}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1361363089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361363086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c6f5a7703f4798967ab6641dac29a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1361363087}
+  newSprite: {fileID: 21300000, guid: 3601b51f33857ce49bd611e9debc44db, type: 3}
+  originalSprite: {fileID: 21300000, guid: b5525eb9943260641918f5d73bed510a, type: 3}
+--- !u!114 &1361363090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361363086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 29489e04067254f53865cf89948fd48e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 498f2cd5-3f84-424b-844a-65c1562add89
+    m_ActionName: strike_green/press_green[/Keyboard/leftArrow,/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 689b1ece-ba4a-4e3e-9dba-644cd543627e
+    m_ActionName: strike_red/press_red[/Keyboard/upArrow,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a3909d82-6086-47dc-bb30-e70a0e58beee
+    m_ActionName: strike_yellow/New action[/Keyboard/downArrow,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1361363089}
+        m_TargetAssemblyTypeName: Press_Blue, Assembly-CSharp
+        m_MethodName: Onpress_blue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
+    m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: strike_blue
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1836424453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1477,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2039154182}
   - component: {fileID: 2039154181}
+  - component: {fileID: 2039154183}
+  - component: {fileID: 2039154184}
   m_Layer: 0
   m_Name: strike_yellow
   m_TagString: Untagged
@@ -1300,7 +1527,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: bbd88df8ced0e8d42872609d3991120a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.995283, b: 0.995283, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1325,6 +1552,79 @@ Transform:
   m_Father: {fileID: 3070067}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2039154183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039154180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1674a132e5abf475d88c1a5914a59ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2039154181}
+  newSprite: {fileID: 21300000, guid: b81e46d155d182f47b4a69e081cf87a6, type: 3}
+  originalSprite: {fileID: 21300000, guid: bbd88df8ced0e8d42872609d3991120a, type: 3}
+--- !u!114 &2039154184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039154180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 29489e04067254f53865cf89948fd48e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 498f2cd5-3f84-424b-844a-65c1562add89
+    m_ActionName: strike_green/press_green[/Keyboard/leftArrow,/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 689b1ece-ba4a-4e3e-9dba-644cd543627e
+    m_ActionName: strike_red/press_red[/Keyboard/upArrow,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2039154183}
+        m_TargetAssemblyTypeName: Press_Yellow, Assembly-CSharp
+        m_MethodName: Onpress_yellow
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a3909d82-6086-47dc-bb30-e70a0e58beee
+    m_ActionName: strike_yellow/New action[/Keyboard/downArrow,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
+    m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: strike_yellow
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2074304127
 GameObject:
   m_ObjectHideFlags: 0

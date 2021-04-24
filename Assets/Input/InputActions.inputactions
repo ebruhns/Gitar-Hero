@@ -1,0 +1,158 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "strike_green",
+            "id": "596188d2-9b5e-43f4-8f13-929e74c5c4ef",
+            "actions": [
+                {
+                    "name": "press_green",
+                    "type": "Button",
+                    "id": "498f2cd5-3f84-424b-844a-65c1562add89",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9384efe1-8f9d-4424-8114-83673fe2f143",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "press_green",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01f5e321-ae46-4961-8159-1d00c1184ff9",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "press_green",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "strike_red",
+            "id": "89eb03ff-a59c-4844-8cc5-e338e16e4875",
+            "actions": [
+                {
+                    "name": "press_red",
+                    "type": "Button",
+                    "id": "689b1ece-ba4a-4e3e-9dba-644cd543627e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1c14d08e-114a-43f8-b0a6-241f49d62188",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "press_red",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c01c7524-1f8b-499c-9911-4001f19c3c66",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "press_red",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "strike_yellow",
+            "id": "e0dd35f5-f580-4747-a426-bfed2f641c60",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "a3909d82-6086-47dc-bb30-e70a0e58beee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "19d9d0b1-4041-421e-ba43-f6d42eb86fd1",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c57249d7-337d-493a-8b65-0c343ba26ea5",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "strike_blue",
+            "id": "54ecc147-040b-4ae5-93ea-2e795e28cb68",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "1979c742-62d7-4d15-bae8-9e03f59295e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0f1d56c8-abe5-40a7-9040-1dab7ea572d5",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ab55fc2-915a-40e4-9be2-7836bd66bfe3",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
