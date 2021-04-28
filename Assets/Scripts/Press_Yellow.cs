@@ -10,6 +10,11 @@ public class Press_Yellow : MonoBehaviour
     public Sprite newSprite;
     public Sprite originalSprite;
 
+    // Create audio object for E note
+    public AudioSource eNote;
+
+    private bool isFreestyle = true;
+
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -19,12 +24,23 @@ public class Press_Yellow : MonoBehaviour
     	if (context.started)
      	{
          //button is press
-     		spriteRenderer.sprite = newSprite; 
-     	}
+     		spriteRenderer.sprite = newSprite;
+
+            //Only play audio if user is in freestyle mode
+            if (isFreestyle)
+            {
+                eNote.Play();
+            }
+        }
      	else if (context.canceled)
      	{
          //button is released
-     		spriteRenderer.sprite = originalSprite; 
-     	}
+     		spriteRenderer.sprite = originalSprite;
+
+            if (isFreestyle)
+            {
+                eNote.Stop();
+            }
+        }
     }
 }

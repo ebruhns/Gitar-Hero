@@ -9,6 +9,11 @@ public class Press_Green : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     public Sprite originalSprite;
+   
+    // Create audio object for C note
+    public AudioSource cNote;
+    
+    private bool isFreestyle = true;
 
     void Start()
     {
@@ -19,12 +24,26 @@ public class Press_Green : MonoBehaviour
     	if (context.started)
      	{
          //button is press
-     		spriteRenderer.sprite = newSprite; 
+     		spriteRenderer.sprite = newSprite;
+
+            //Only play audio if user is in freestyle mode
+            if(isFreestyle)
+            {
+                cNote.Play();
+            }
+            
      	}
      	else if (context.canceled)
      	{
          //button is released
-     		spriteRenderer.sprite = originalSprite; 
-     	}
+     		spriteRenderer.sprite = originalSprite;
+            
+            //Only stop audio if user is in freestyle mode
+            
+            if (isFreestyle)
+            {
+                cNote.Stop();
+            }
+        }
     }
 }
