@@ -9,6 +9,8 @@ public class Press_Green : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     public Sprite originalSprite;
+    public bool canStrum = false;
+
    
     // Create audio object for C note
     public AudioSource cNote;
@@ -26,11 +28,7 @@ public class Press_Green : MonoBehaviour
          //button is press
      		spriteRenderer.sprite = newSprite;
 
-            //Only play audio if user is in freestyle mode
-            if(isFreestyle)
-            {
-                cNote.Play();
-            }
+            canStrum = true;
             
      	}
      	else if (context.canceled)
@@ -38,8 +36,20 @@ public class Press_Green : MonoBehaviour
          //button is released
      		spriteRenderer.sprite = originalSprite;
             
-            //Only stop audio if user is in freestyle mode
-            
+            canStrum = false;
+        }
+    }
+    public void On_strum(InputAction.CallbackContext context){
+        if (context.started)
+        {
+                //Only play audio if user is in freestyle mode
+            if (isFreestyle && canStrum)
+            {
+                cNote.Play();
+            }
+        }
+        else if (context.canceled)
+        {
             if (isFreestyle)
             {
                 cNote.Stop();

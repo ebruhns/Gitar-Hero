@@ -9,10 +9,11 @@ public class Press_Yellow : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     public Sprite originalSprite;
+    public bool canStrum = false;
+
 
     // Create audio object for E note
     public AudioSource eNote;
-
     private bool isFreestyle = true;
 
     void Start()
@@ -23,24 +24,33 @@ public class Press_Yellow : MonoBehaviour
     public void Onpress_yellow(InputAction.CallbackContext context){
     	if (context.started)
      	{
-         //button is press
-     		spriteRenderer.sprite = newSprite;
+                //button is press
+            spriteRenderer.sprite = newSprite;
+            canStrum = true;
+        }
+     	else if (context.canceled)
+     	{
+         //button is released
+            spriteRenderer.sprite = originalSprite;
+            canStrum = false;
+        }
+    }
 
-            //Only play audio if user is in freestyle mode
-            if (isFreestyle)
+    public void On_strum(InputAction.CallbackContext context){
+    	if (context.started)
+     	{
+                //Only play audio if user is in freestyle mode
+            if (isFreestyle && canStrum)
             {
                 eNote.Play();
             }
         }
      	else if (context.canceled)
      	{
-         //button is released
-     		spriteRenderer.sprite = originalSprite;
-
             if (isFreestyle)
             {
                 eNote.Stop();
             }
         }
-    }
+    }      
 }

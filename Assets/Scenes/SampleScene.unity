@@ -261,6 +261,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 103830666}
   newSprite: {fileID: 21300000, guid: cef3c0b3fb53c6b4dbd1d03b9a60882d, type: 3}
   originalSprite: {fileID: 21300000, guid: 631498775bafd90438135f2f3218ed6e, type: 3}
+  canStrum: 0
   dNote: {fileID: 1227117525}
 --- !u!114 &103830669
 MonoBehaviour:
@@ -315,6 +316,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
     m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf81b30c-83a8-4d97-abb3-ae8f5f9fad41
+    m_ActionName: strike_green/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 103830668}
+        m_TargetAssemblyTypeName: Press_Red, Assembly-CSharp
+        m_MethodName: On_strum
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 731812bf-98b5-423c-9f50-9fd317c01caf
+    m_ActionName: strike_red/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6387affe-d8bb-46c3-aca3-dcaf90599166
+    m_ActionName: strike_yellow/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c3dd051a-730e-4634-ba18-c521ef292a00
+    m_ActionName: strike_blue/strum[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: strike_red
@@ -1376,6 +1405,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1261169626}
   newSprite: {fileID: 21300000, guid: ec73f66d5c1c0424790ea372715d9389, type: 3}
   originalSprite: {fileID: 21300000, guid: 7fe617cd2b86f8046a077d2d90e9e227, type: 3}
+  canStrum: 0
   cNote: {fileID: 1355275342}
 --- !u!114 &1261169629
 MonoBehaviour:
@@ -1430,6 +1460,34 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
     m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1261169628}
+        m_TargetAssemblyTypeName: Press_Green, Assembly-CSharp
+        m_MethodName: On_strum
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bf81b30c-83a8-4d97-abb3-ae8f5f9fad41
+    m_ActionName: strike_green/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 731812bf-98b5-423c-9f50-9fd317c01caf
+    m_ActionName: strike_red/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6387affe-d8bb-46c3-aca3-dcaf90599166
+    m_ActionName: strike_yellow/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c3dd051a-730e-4634-ba18-c521ef292a00
+    m_ActionName: strike_blue/strum[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: strike_green
@@ -1744,6 +1802,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1361363087}
   newSprite: {fileID: 21300000, guid: 3601b51f33857ce49bd611e9debc44db, type: 3}
   originalSprite: {fileID: 21300000, guid: b5525eb9943260641918f5d73bed510a, type: 3}
+  canStrum: 0
   fNote: {fileID: 2074005710}
 --- !u!114 &1361363090
 MonoBehaviour:
@@ -1798,6 +1857,34 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
     m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf81b30c-83a8-4d97-abb3-ae8f5f9fad41
+    m_ActionName: strike_green/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 731812bf-98b5-423c-9f50-9fd317c01caf
+    m_ActionName: strike_red/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6387affe-d8bb-46c3-aca3-dcaf90599166
+    m_ActionName: strike_yellow/strum[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1361363089}
+        m_TargetAssemblyTypeName: Press_Blue, Assembly-CSharp
+        m_MethodName: On_strum
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c3dd051a-730e-4634-ba18-c521ef292a00
+    m_ActionName: strike_blue/strum[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: strike_blue
@@ -1985,6 +2072,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2039154181}
   newSprite: {fileID: 21300000, guid: b81e46d155d182f47b4a69e081cf87a6, type: 3}
   originalSprite: {fileID: 21300000, guid: bbd88df8ced0e8d42872609d3991120a, type: 3}
+  canStrum: 0
   eNote: {fileID: 721696803}
 --- !u!114 &2039154184
 MonoBehaviour:
@@ -2039,6 +2127,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1979c742-62d7-4d15-bae8-9e03f59295e1
     m_ActionName: strike_blue/New action[/Keyboard/rightArrow,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2039154183}
+        m_TargetAssemblyTypeName: Press_Yellow, Assembly-CSharp
+        m_MethodName: On_strum
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6387affe-d8bb-46c3-aca3-dcaf90599166
+    m_ActionName: strike_yellow/strum[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: strike_yellow

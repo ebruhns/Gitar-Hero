@@ -11,7 +11,15 @@
                     "id": "498f2cd5-3f84-424b-844a-65c1562add89",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press(behavior=2)"
+                    "interactions": ""
+                },
+                {
+                    "name": "strum",
+                    "type": "Button",
+                    "id": "bf81b30c-83a8-4d97-abb3-ae8f5f9fad41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -36,6 +44,17 @@
                     "action": "press_green",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9230ab4-6730-489d-b803-332fef5eece2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "strum",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -47,6 +66,14 @@
                     "name": "press_red",
                     "type": "Button",
                     "id": "689b1ece-ba4a-4e3e-9dba-644cd543627e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "strum",
+                    "type": "Button",
+                    "id": "731812bf-98b5-423c-9f50-9fd317c01caf",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(behavior=2)"
@@ -67,11 +94,22 @@
                 {
                     "name": "",
                     "id": "c01c7524-1f8b-499c-9911-4001f19c3c66",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "press_red",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "716b67d1-2ff4-4dd4-a378-b43b402a6bfc",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "strum",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -82,9 +120,17 @@
             "id": "e0dd35f5-f580-4747-a426-bfed2f641c60",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "press_yellow",
                     "type": "Button",
                     "id": "a3909d82-6086-47dc-bb30-e70a0e58beee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "strum",
+                    "type": "Button",
+                    "id": "6387affe-d8bb-46c3-aca3-dcaf90599166",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(behavior=2)"
@@ -98,18 +144,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "press_yellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "c57249d7-337d-493a-8b65-0c343ba26ea5",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "press_yellow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32279dfa-541a-4b84-84ea-63299bdc75bb",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "strum",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -120,9 +177,17 @@
             "id": "54ecc147-040b-4ae5-93ea-2e795e28cb68",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "press_blue",
                     "type": "Button",
                     "id": "1979c742-62d7-4d15-bae8-9e03f59295e1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "strum",
+                    "type": "Button",
+                    "id": "c3dd051a-730e-4634-ba18-c521ef292a00",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(behavior=2)"
@@ -136,18 +201,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "press_blue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "6ab55fc2-915a-40e4-9be2-7836bd66bfe3",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "press_blue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db050ea2-af7a-4d26-9825-244d73172d8b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "strum",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
