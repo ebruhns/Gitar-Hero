@@ -166,7 +166,7 @@ public class ChartLoaderTest : MonoBehaviour {
         string currentDifficulty;
 
         ChartReader chartReader = new ChartReader();
-        Chart = chartReader.ReadChartFile(Application.dataPath + Path);
+        Chart = chartReader.ReadChartFile(Path);
 
         currentDifficulty = RetrieveDifficulty();
 

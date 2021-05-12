@@ -1550,8 +1550,7 @@ MonoBehaviour:
   - {fileID: 4626359991842112, guid: 01b9310d07202bd43aae6dead229c865, type: 3}
   - {fileID: 4014135116710048, guid: 43388091a96bce747b5c4c4f122ae893, type: 3}
   - {fileID: 4413157362768838, guid: 86d778fe174d8eb4488e45e7189f9b26, type: 3}
-  _path: /ChartLoader/ChartLoader/Songs/Game Changer/Game Changer/Tier 03 - Morale
-    Boosters/2. Sleepwalk (Satriani)/notes.chart
+  _path: Assets/Sounds/notes.chart
   _cameraMovement: {fileID: 1838201408}
   _music: {fileID: 1152179206}
   _starPowerPrefab: {fileID: 4109334711829988, guid: 11bbda1d49dc14b489fa8a659b8ad58c, type: 3}
