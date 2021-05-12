@@ -26,14 +26,14 @@ public class Press_Blue : MonoBehaviour
      	{
          //button is press
      		spriteRenderer.sprite = newSprite;
-            canStrum = true;
+            //canStrum = true;
         }
      	else if (context.canceled)
      	{
          //button is released
      		spriteRenderer.sprite = originalSprite;
 
-            canStrum = false;
+            //canStrum = false;
         }
     }
     public void On_strum(InputAction.CallbackContext context){

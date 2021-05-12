@@ -28,7 +28,7 @@ public class Press_Green : MonoBehaviour
          //button is press
      		spriteRenderer.sprite = newSprite;
 
-            canStrum = true;
+            //canStrum = true;
             
      	}
      	else if (context.canceled)
@@ -36,7 +36,7 @@ public class Press_Green : MonoBehaviour
          //button is released
      		spriteRenderer.sprite = originalSprite;
             
-            canStrum = false;
+            //canStrum = false;
         }
     }
     public void On_strum(InputAction.CallbackContext context){

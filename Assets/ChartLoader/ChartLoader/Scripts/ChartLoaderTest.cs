@@ -19,10 +19,6 @@ public class ChartLoaderTest : MonoBehaviour {
         MediumGuitar,
         HardGuitar,
         ExpertGuitar,
-        EasyDrums,
-        MediumDrums,
-        HardDrums,
-        ExpertDrums
     }
 
     public Difficulty difficulty;
@@ -180,7 +176,7 @@ public class ChartLoaderTest : MonoBehaviour {
 
         //SpawnSections(Chart.Sections);
 
-        SpawnSynchTracks(Chart.SynchTracks);
+        //SpawnSynchTracks(Chart.SynchTracks);
 
         StartSong();
 	}
@@ -206,18 +202,6 @@ public class ChartLoaderTest : MonoBehaviour {
             case Difficulty.ExpertGuitar:
                 result = "ExpertSingle";
                 break;
-            case Difficulty.EasyDrums:
-                result = "EasyDrums";
-                break;
-            case Difficulty.MediumDrums:
-                result = "MediumDrums";
-                break;
-            case Difficulty.HardDrums:
-                result = "HardDrums";
-                break;
-            case Difficulty.ExpertDrums:
-                result = "ExpertDrums";
-                break;
             default:
                 result = "ExpertSingle";
                 break;
@@ -239,7 +223,6 @@ public class ChartLoaderTest : MonoBehaviour {
                 transform, 
                 new Vector3(-2.5f, 0, section.Seconds * Speed)
                 );
-            tmp.GetChild(0).GetComponent<TextMesh>().text = section.SectionName;
         }
     }
 
@@ -283,11 +266,11 @@ public class ChartLoaderTest : MonoBehaviour {
         foreach (Note note in notes)
         {
             z = note.Seconds * Speed;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 if (note.ButtonIndexes[i])
                 {
-                    noteTmp = SpawnPrefab(SolidNotes[i], transform, new Vector3(i - 2f, 0, z));
+                    noteTmp = SpawnPrefab(SolidNotes[i], transform, new Vector3(i - 1.25f, 0, z));
                     SetLongNoteScale(noteTmp.GetChild(0), note.DurationSeconds * Speed);
                     if (note.IsHOPO)
                         SetHOPO(noteTmp);
