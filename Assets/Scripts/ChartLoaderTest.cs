@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 using ChartLoader.NET.Framework;
 using ChartLoader.NET.Utils;
 
@@ -9,6 +11,7 @@ public class ChartLoaderTest : MonoBehaviour {
     /// The current associated chart.
     /// </summary>
     public static Chart Chart;
+    //public Text textObject;
 
     /// <summary>
     /// Enumerator for all major difficulties.
@@ -22,152 +25,33 @@ public class ChartLoaderTest : MonoBehaviour {
     }
 
     public Difficulty difficulty;
+    public float Speed;
+    public Transform[] SolidNotes;
+    public string Path;
+    public CameraMovement CameraMovement;
+    public AudioSource Music;
+    public Transform StarPowerPrefab;
+    public Transform SectionPrefab;
+    public Transform BpmPrefab;
 
-    [SerializeField]
-    private float _speed = 1f;
-    /// <summary>
-    /// The game speed.
-    /// </summary>
-    public float Speed
-    {
-        get
-        {
-            return _speed;
-        }
-        set
-        {
-            _speed = value;
-        }
-    }
+    private string yourAnswer;
+    public Text HpText;
 
-    [SerializeField]
-    private Transform[] _solidNotes;
-    /// <summary>
-    /// The note prefabs to be instantiated.
-    /// </summary>
-    public Transform[] SolidNotes
-    {
-        get 
-        { 
-            return _solidNotes; 
-        }
-        set 
-        { 
-            _solidNotes = value; 
-        }
-    }
+    //public string inputText;
 
-    [SerializeField]
-    private string _path;
-    /// <summary>
-    /// The current path of the chart file.
-    /// </summary>
-    public string Path
-    {
-        get 
-        {
-            return _path; 
-        }
-        set 
-        {
-            _path = value; 
-        }
-    }
-
-    [SerializeField]
-    private CameraMovement _cameraMovement;
-    /// <summary>
-    /// Camera movement aggregation.
-    /// </summary>
-    public CameraMovement CameraMovement
-    {
-        get 
-        { 
-            return _cameraMovement; 
-        }
-        set 
-        { 
-            _cameraMovement = value; 
-        }
-    }
-
-    [SerializeField]
-    private AudioSource _music;
-    /// <summary>
-    /// The music audio source.
-    /// </summary>
-    public AudioSource Music
-    {
-        get 
-        { 
-            return _music; 
-        }
-        set 
-        { 
-            _music = value; 
-        }
-    }
-
-    [SerializeField]
-    private Transform _starPowerPrefab;
-    /// <summary>
-    /// The star power prefab instantiated should there be any star power at all.
-    /// </summary>
-    public Transform StarPowerPrefab
-    {
-        get 
-        { 
-            return _starPowerPrefab; 
-        }
-        set 
-        { 
-            _starPowerPrefab = value; 
-        }
-    }
-
-    [SerializeField]
-    private Transform _sectionPrefab;
-    /// <summary>
-    /// The section prefab instantiated should there be any sections at all.
-    /// </summary>
-    public Transform SectionPrefab
-    {
-        get
-        {
-            return _sectionPrefab;
-        }
-        set
-        {
-            _sectionPrefab = value;
-        }
-    }
-
-    [SerializeField]
-    private Transform _bpmPrefab;
-    /// <summary>
-    /// The BPM prefab instantiated should there be any sections at all.
-    /// </summary>
-    public Transform BpmPrefab
-    {
-        get
-        {
-            return _bpmPrefab;
-        }
-        set
-        {
-            _bpmPrefab = value;
-        }
-    }
-    
-
+    //Chart = chartReader.ReadChartFile((TextAsset)Resources.Load("myText"));
 	// Use this for initialization
 	void Start ()
     {
         string currentDifficulty;
 
         ChartReader chartReader = new ChartReader();
-        Chart = chartReader.ReadChartFile(Path);
+        //List<string> termsList = new List<string>();
+		//string[] add_arr = new string[570];
+        string[] words = new string[] {"[Song]", "{", "Name = Sleep Walk","Artist = Joe Satriani"};
 
+		Chart = chartReader.ParseChartText(words);
+        
         currentDifficulty = RetrieveDifficulty();
 
         SpawnNotes(Chart.GetNotes(currentDifficulty));
