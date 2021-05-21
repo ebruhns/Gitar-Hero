@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
 
+
+
 public class Press_Green : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -10,16 +12,22 @@ public class Press_Green : MonoBehaviour
     public Sprite newSprite;
     public Sprite originalSprite;
     public bool canStrum = false;
-
+    public ChartLoaderTest chartLoaderTest;
+    bool active = false;
+    GameObject note;
    
+
+
     // Create audio object for C note
     public AudioSource cNote;
     
-    private bool isFreestyle = true;
+    private bool isFreestyle = false;
+   
 
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+       
     }
 
     public void Onpress_green(InputAction.CallbackContext context){
@@ -27,8 +35,13 @@ public class Press_Green : MonoBehaviour
      	{
          //button is press
      		spriteRenderer.sprite = newSprite;
+            if (active)
+            {
 
-            //canStrum = true;
+            }
+            
+
+            canStrum = true;
             
      	}
      	else if (context.canceled)
@@ -36,9 +49,30 @@ public class Press_Green : MonoBehaviour
          //button is released
      		spriteRenderer.sprite = originalSprite;
             
-            //canStrum = false;
+            canStrum = false;
         }
     }
+
+    public void onTriggerEnter(Collision col)
+    {
+        print("Collision Detected");
+        if (col.gameObject.name == "Blue Note(Clone)")
+        {
+            Debug.Log("fdhsjakfhdsjak");
+        }
+
+        if (col.gameObject.tag == "Note")
+        {
+            note = col.gameObject;
+            active = true;
+        }
+    }
+    public void onTriggerExit(Collision col)
+    {
+        active = false;
+    }
+
+
     public void On_strum(InputAction.CallbackContext context){
         if (context.started)
         {
@@ -46,6 +80,13 @@ public class Press_Green : MonoBehaviour
             if (isFreestyle && canStrum)
             {
                 cNote.Play();
+               
+            }
+            else if (canStrum && active)
+            {
+                
+
+
             }
         }
         else if (context.canceled)

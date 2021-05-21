@@ -10,6 +10,8 @@ public class Press_Blue : MonoBehaviour
     public Sprite newSprite;
     public Sprite originalSprite;
     public bool canStrum = false;
+    bool active = false;
+    GameObject note;
 
     //Create Audio source for F note
     public AudioSource fNote;
@@ -19,6 +21,25 @@ public class Press_Blue : MonoBehaviour
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        if (active) { }
+    }
+    public void onTriggerEnter(Collision col)
+    {
+        print("Collision Detected");
+        if (col.gameObject.name == "Blue Note(Clone)")
+        {
+            Debug.Log("fdhsjakfhdsjak");
+        }
+
+        if (col.gameObject.tag == "Note")
+        {
+            note = col.gameObject;
+            active = true;
+        }
+    }
+    public void onTriggerExit(Collision col)
+    {
+        active = false;
     }
 
     public void Onpress_blue(InputAction.CallbackContext context){

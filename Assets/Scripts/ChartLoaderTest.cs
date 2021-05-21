@@ -163,12 +163,18 @@ public class ChartLoaderTest : MonoBehaviour {
 
         foreach (Note note in notes)
         {
+            //note.tag = "Note";
             z = note.Seconds * Speed;
             for (int i = 0; i < 4; i++)
             {
                 if (note.ButtonIndexes[i])
                 {
                     noteTmp = SpawnPrefab(SolidNotes[i], transform, new Vector3(i - 1.25f, 0, z));
+                    noteTmp.tag = "Note";
+                    Rigidbody rb = noteTmp.gameObject.AddComponent<Rigidbody>();
+                    rb.useGravity = false;
+                    SphereCollider sc = noteTmp.gameObject.AddComponent<SphereCollider>();
+                    sc.isTrigger = true;
                     SetLongNoteScale(noteTmp.GetChild(0), note.DurationSeconds * Speed);
                     if (note.IsHOPO)
                         SetHOPO(noteTmp);
@@ -187,6 +193,11 @@ public class ChartLoaderTest : MonoBehaviour {
         CameraMovement.Speed = Speed;
         CameraMovement.enabled = true;
         PlayMusic();
+    }
+
+    public void CheckGreen()
+    {
+        print("hello");
     }
 
     /// <summary>
