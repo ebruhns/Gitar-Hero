@@ -33,41 +33,33 @@ public class Press_Green : MonoBehaviour
     public void Onpress_green(InputAction.CallbackContext context){
     	if (context.started)
      	{
-         //button is press
-     		spriteRenderer.sprite = newSprite;
-            if (active)
-            {
-
-            }
-            
-
+            //button is press
+            spriteRenderer.sprite = newSprite;
             canStrum = true;
             
      	}
      	else if (context.canceled)
      	{
-         //button is released
-     		spriteRenderer.sprite = originalSprite;
-            
+            //button is released
+            spriteRenderer.sprite = originalSprite;
             canStrum = false;
         }
     }
 
-    public void onTriggerEnter(Collision col)
-    {
-        print("Collision Detected");
-        if (col.gameObject.name == "Blue Note(Clone)")
-        {
-            Debug.Log("fdhsjakfhdsjak");
-        }
 
-        if (col.gameObject.tag == "Note")
+
+    public void OnTriggerEnter(Collider col)
+    {
+
+        if (col.gameObject.name == "Green Note(Clone)")
         {
+            print("Green note");
             note = col.gameObject;
             active = true;
         }
+
     }
-    public void onTriggerExit(Collision col)
+    public void OnTriggerExit(Collider col)
     {
         active = false;
     }
@@ -84,9 +76,7 @@ public class Press_Green : MonoBehaviour
             }
             else if (canStrum && active)
             {
-                
-
-
+                Destroy(note);
             }
         }
         else if (context.canceled)

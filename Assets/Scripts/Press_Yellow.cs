@@ -16,61 +16,65 @@ public class Press_Yellow : MonoBehaviour
 
     // Create audio object for E note
     public AudioSource eNote;
-    private bool isFreestyle = true;
+    private bool isFreestyle = false;
 
     void Start()
     {
-    	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if (active) { }
     }
 
-    public void Onpress_yellow(InputAction.CallbackContext context){
-    	if (context.started)
-     	{
-                //button is press
+    public void Onpress_yellow(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            //button is press
             spriteRenderer.sprite = newSprite;
-            //canStrum = true;
+            canStrum = true;
         }
-     	else if (context.canceled)
-     	{
-         //button is released
+        else if (context.canceled)
+        {
+            //button is released
             spriteRenderer.sprite = originalSprite;
-            //canStrum = false;
+            canStrum = false;
         }
     }
 
-    public void On_strum(InputAction.CallbackContext context){
-    	if (context.started)
-     	{
-                //Only play audio if user is in freestyle mode
+    public void On_strum(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            //Only play audio if user is in freestyle mode
             if (isFreestyle && canStrum)
             {
                 eNote.Play();
             }
+            else if (canStrum && active)
+            {
+                Destroy(note);
+            }
         }
-     	else if (context.canceled)
-     	{
+        else if (context.canceled)
+        {
             if (isFreestyle)
             {
                 eNote.Stop();
             }
         }
     }
-    public void onTriggerEnter(Collision col)
+    public void OnTriggerEnter(Collider col)
     {
-        print("Collision Detected");
-        if (col.gameObject.name == "Blue Note(Clone)")
-        {
-            Debug.Log("fdhsjakfhdsjak");
-        }
 
-        if (col.gameObject.tag == "Note")
+        if (col.gameObject.name == "Yellow Note(Clone)")
         {
+            print("Yellow note");
             note = col.gameObject;
             active = true;
         }
+
+
     }
-    public void onTriggerExit(Collision col)
+    public void OnTriggerExit(Collider col)
     {
         active = false;
     }

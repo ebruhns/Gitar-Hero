@@ -15,7 +15,7 @@ public class Press_Blue : MonoBehaviour
 
     //Create Audio source for F note
     public AudioSource fNote;
-    private bool isFreestyle = true;
+    private bool isFreestyle = false;
 
 
     void Start()
@@ -23,21 +23,22 @@ public class Press_Blue : MonoBehaviour
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if (active) { }
     }
-    public void onTriggerEnter(Collision col)
+
+
+
+    public void OnTriggerEnter(Collider col)
     {
-        print("Collision Detected");
+        
         if (col.gameObject.name == "Blue Note(Clone)")
         {
-            Debug.Log("fdhsjakfhdsjak");
-        }
-
-        if (col.gameObject.tag == "Note")
-        {
+            print("blue note");
             note = col.gameObject;
             active = true;
         }
+
+        
     }
-    public void onTriggerExit(Collision col)
+    public void OnTriggerExit(Collider col)
     {
         active = false;
     }
@@ -47,14 +48,14 @@ public class Press_Blue : MonoBehaviour
      	{
          //button is press
      		spriteRenderer.sprite = newSprite;
-            //canStrum = true;
+            canStrum = true;
         }
      	else if (context.canceled)
      	{
          //button is released
      		spriteRenderer.sprite = originalSprite;
 
-            //canStrum = false;
+            canStrum = false;
         }
     }
     public void On_strum(InputAction.CallbackContext context){
@@ -64,6 +65,10 @@ public class Press_Blue : MonoBehaviour
             if (isFreestyle && canStrum)
             {
                 fNote.Play();
+            }
+            else if(canStrum && active)
+            {
+                Destroy(note);
             }
         }
         else if (context.canceled)

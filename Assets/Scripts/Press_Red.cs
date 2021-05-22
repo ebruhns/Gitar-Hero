@@ -16,12 +16,13 @@ public class Press_Red : MonoBehaviour
     // Create audio object for E note
     public AudioSource dNote;
 
-    private bool isFreestyle = true;
+    private bool isFreestyle = false;
 
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if (active) { }
+        
     }
 
     public void Onpress_red(InputAction.CallbackContext context){
@@ -30,14 +31,14 @@ public class Press_Red : MonoBehaviour
          //button is press
      		spriteRenderer.sprite = newSprite;
 
-            //canStrum = true;
+            canStrum = true;
         }
      	else if (context.canceled)
      	{
          //button is released
      		spriteRenderer.sprite = originalSprite;
 
-            //canStrum = false;
+            canStrum = false;
         }
     }
     public void On_strum(InputAction.CallbackContext context){
@@ -48,6 +49,10 @@ public class Press_Red : MonoBehaviour
             {
                 dNote.Play();
             }
+            else if (canStrum && active)
+            {
+                Destroy(note);
+            }
         }
         else if (context.canceled)
         {
@@ -57,21 +62,19 @@ public class Press_Red : MonoBehaviour
             }
         }
     }
-    public void onTriggerEnter(Collision col)
+    public void OnTriggerEnter(Collider col)
     {
-        print("Collision Detected");
+
         if (col.gameObject.name == "Red Note(Clone)")
         {
-            Debug.Log("fdhsjakfhdsjak");
-        }
-
-        if (col.gameObject.tag == "Note")
-        {
+            print("blue note");
             note = col.gameObject;
             active = true;
         }
+
+
     }
-    public void onTriggerExit(Collision col)
+    public void OnTriggerExit(Collider col)
     {
         active = false;
     }
