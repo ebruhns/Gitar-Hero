@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8244dbfbadee414d80f411f2861a23e, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.48235294, g: 0.18431373, b: 0.18431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -914,7 +914,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8244dbfbadee414d80f411f2861a23e, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.48235294, g: 0.18431373, b: 0.18431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1051,226 +1051,6 @@ Transform:
   m_Father: {fileID: 1715593168}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &538804562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 538804563}
-  - component: {fileID: 538804565}
-  - component: {fileID: 538804564}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &538804563
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538804562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 786336745}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &538804564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538804562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "[Song]\r\n{\r\n  Name = \"Sleep Walk\"\r\n  Artist = \"Joe Satriani\"\r\n 
-    Charter = \"Rob\"\r\n  Offset = 0\r\n  Resolution = 192\r\n  Player2 = bass\r\n 
-    Difficulty = 0\r\n  PreviewStart = 0\r\n  PreviewEnd = 0\r\n  Genre = \"rock\"\r\n 
-    MediaType = \"cd\"\r\n  MusicStream = \"song.mp3\"\r\n}\r\n[SyncTrack]\r\n{\r\n 
-    0 = TS 1\r\n  0 = B 124032\r\n  192 = TS 3\r\n  192 = B 105551\r\n  384 = B 105055\r\n 
-    768 = TS 4\r\n  768 = B 125367\r\n  960 = B 117217\r\n  1152 = B 111890\r\n 
-    1344 = B 109481\r\n  1536 = B 105465\r\n  2112 = B 127592\r\n  2304 = B 148169\r\n 
-    2496 = B 128387\r\n  2688 = B 109481\r\n  2880 = B 167212\r\n  3072 = B 123932\r\n 
-    3264 = B 114510\r\n  3456 = B 109481\r\n  3648 = B 147064\r\n  3840 = TS 3\r\n 
-    3840 = B 106519\r\n  4224 = B 100239\r\n  4416 = TS 3 3\r\n  4416 = B 97299\r\n 
-    4704 = TS 6 3\r\n  4704 = B 96000\r\n  42720 = B 87750\r\n  42912 = B 92880\r\n 
-    43008 = B 77899\r\n  43104 = B 61916\r\n  43296 = B 77762\r\n  43488 = B 91209\r\n 
-    43680 = B 90888\r\n  43776 = B 50008\r\n  43872 = B 50695\r\n  44160 = B 101277\r\n 
-    44256 = B 70097\r\n  44352 = B 55184\r\n  44448 = B 102451\r\n  44640 = B 96000\r\n 
-    44832 = B 125201\r\n  45024 = B 98182\r\n  45120 = B 85336\r\n  47328 = TS 4\r\n 
-    47328 = B 105172\r\n  47520 = B 98749\r\n  47616 = B 100127\r\n  47712 = B 96000\r\n 
-    47904 = B 96000\r\n  48096 = TS 3\r\n  48096 = B 92459\r\n  48288 = B 106043\r\n 
-    48672 = TS 4\r\n  48672 = B 96000\r\n}\r\n[Events]\r\n{\r\n  0 = E \"section
-    Ambient Intro\"\r\n  4704 = E \"section Intro\"\r\n  9312 = E \"section Chorus
-    1A\"\r\n  13920 = E \"section Chorus 1B\"\r\n  18528 = E \"section Chorus 2A\"\r\n 
-    23136 = E \"section Chorus 2B\"\r\n  27744 = E \"section Bridge A\"\r\n  32352
-    = E \"section Bridge B\"\r\n  36960 = E \"section Chorus 3A\"\r\n  41568 = E
-    \"section Chorus 3B\"\r\n  45024 = E \"section Ending\"\r\n}\r\n[ExpertSingle]\r\n{\r\n 
-    192 = N 0 3624\r\n  384 = N 3 360\r\n  384 = N 6 0\r\n  768 = N 4 168\r\n  768
-    = N 6 0\r\n  960 = N 3 168\r\n  960 = N 6 0\r\n  1152 = N 4 168\r\n  1152 = N
-    6 0\r\n  1344 = N 3 168\r\n  1344 = N 6 0\r\n  1536 = N 2 456\r\n  1536 = N 6
-    0\r\n  2016 = N 3 72\r\n  2016 = N 6 0\r\n  2112 = N 4 168\r\n  2112 = N 6 0\r\n 
-    2304 = N 3 168\r\n  2304 = N 6 0\r\n  2496 = N 2 168\r\n  2496 = N 6 0\r\n  2688
-    = N 1 552\r\n  2688 = N 6 0\r\n  3264 = N 4 0\r\n  3264 = N 6 0\r\n  3312 = N
-    3 0\r\n  3312 = N 6 0\r\n  3360 = N 2 1128\r\n  3360 = N 6 0\r\n  3840 = N 0
-    648\r\n  3840 = S 2 864\r\n  4512 = N 1 72\r\n  4512 = N 3 72\r\n  4512 = N 6
-    0\r\n  4608 = N 2 72\r\n  4608 = N 4 72\r\n  4608 = N 6 0\r\n  4896 = N 1 0\r\n 
-    4896 = N 2 0\r\n  4920 = N 1 0\r\n  4920 = N 3 0\r\n  4920 = N 5 0\r\n  4992
-    = N 1 0\r\n  4992 = N 2 0\r\n  5016 = N 1 144\r\n  5016 = N 3 144\r\n  5016 =
-    N 5 0\r\n  5280 = N 1 0\r\n  5280 = N 2 0\r\n  5280 = N 3 0\r\n  5304 = N 1 144\r\n 
-    5304 = N 2 144\r\n  5304 = N 4 144\r\n  5304 = N 5 0\r\n  5472 = N 1 0\r\n  5472
-    = N 2 0\r\n  5472 = N 3 0\r\n  5496 = N 1 48\r\n  5496 = N 2 48\r\n  5496 = N
-    4 48\r\n  5496 = N 5 0\r\n  5568 = N 1 168\r\n  5568 = N 2 168\r\n  5568 = N
-    4 168\r\n  5856 = N 0 168\r\n  5856 = N 1 168\r\n  6048 = N 1 168\r\n  6048 =
-    N 2 168\r\n  6240 = N 0 0\r\n  6240 = N 1 0\r\n  6336 = N 0 0\r\n  6336 = N 1
-    0\r\n  6432 = N 0 360\r\n  6432 = N 2 360\r\n  6432 = N 3 360\r\n  6816 = N 1
-    72\r\n  6912 = N 2 72\r\n  6912 = N 5 0\r\n  7008 = N 3 0\r\n  7008 = N 5 0\r\n 
-    7032 = N 4 144\r\n  7200 = N 3 360\r\n  7200 = N 5 0\r\n  8160 = N 0 168\r\n 
-    8160 = N 1 168\r\n  8160 = N 2 168\r\n  8160 = S 2 672\r\n  8352 = N 0 168\r\n 
-    8352 = N 1 168\r\n  8352 = N 2 168\r\n  8544 = N 0 0\r\n  8544 = N 1 0\r\n  8544
-    = N 2 0\r\n  8640 = N 0 0\r\n  8640 = N 1 0\r\n  8640 = N 2 0\r\n  8736 = N 0
-    0\r\n  8736 = N 1 0\r\n  8736 = N 2 0\r\n  8760 = N 0 240\r\n  8760 = N 2 240\r\n 
-    8760 = N 3 240\r\n  8760 = N 5 0\r\n  9312 = N 4 408\r\n  9744 = N 3 120\r\n 
-    9744 = N 5 0\r\n  9888 = N 3 552\r\n  10848 = N 0 0\r\n  10848 = N 1 0\r\n  10944
-    = N 1 0\r\n  10944 = N 2 0\r\n  11040 = N 1 0\r\n  11040 = N 2 0\r\n  11064 =
-    N 1 144\r\n  11064 = N 3 144\r\n  11064 = N 5 0\r\n  11232 = N 1 168\r\n  11232
-    = N 2 168\r\n  11232 = N 5 0\r\n  11424 = N 0 0\r\n  11424 = N 1 0\r\n  11616
-    = N 2 0\r\n  11628 = N 3 0\r\n  11640 = N 4 432\r\n  12192 = N 3 552\r\n  13152
-    = N 0 0\r\n  13152 = N 1 0\r\n  13248 = N 1 0\r\n  13248 = N 2 0\r\n  13344 =
-    N 1 0\r\n  13344 = N 2 0\r\n  13392 = N 1 120\r\n  13392 = N 3 120\r\n  13392
-    = N 5 0\r\n  13536 = N 1 168\r\n  13536 = N 2 168\r\n  13536 = N 5 0\r\n  13728
-    = N 2 0\r\n  13920 = N 2 0\r\n  13968 = N 3 216\r\n  14208 = N 2 0\r\n  14272
-    = N 3 0\r\n  14272 = N 5 0\r\n  14336 = N 2 0\r\n  14336 = N 5 0\r\n  14400 =
-    N 1 0\r\n  14400 = N 5 0\r\n  14496 = N 0 264\r\n  14496 = S 2 672\r\n  14784
-    = N 0 0\r\n  14832 = N 1 0\r\n  14880 = N 2 0\r\n  14928 = N 3 0\r\n  14976 =
-    N 2 0\r\n  15024 = N 3 0\r\n  15072 = N 4 0\r\n  15264 = N 3 0\r\n  15360 = N
-    3 0\r\n  15456 = N 3 0\r\n  15552 = N 3 0\r\n  15648 = N 1 0\r\n  15648 = N 3
-    0\r\n  15672 = N 2 144\r\n  15672 = N 4 144\r\n  15672 = N 5 0\r\n  15840 = N
-    1 0\r\n  15840 = N 3 0\r\n  15864 = N 2 144\r\n  15864 = N 4 144\r\n  15864 =
-    N 5 0\r\n  16032 = N 1 0\r\n  16032 = N 3 0\r\n  16056 = N 2 144\r\n  16056 =
-    N 4 144\r\n  16056 = N 5 0\r\n  16224 = N 1 0\r\n  16224 = N 3 0\r\n  16248 =
-    N 2 336\r\n  16248 = N 4 336\r\n  16248 = N 5 0\r\n  16608 = N 1 72\r\n  16704
-    = N 2 72\r\n  16704 = N 5 0\r\n  16800 = N 3 0\r\n  16800 = N 5 0\r\n  16824
-    = N 4 144\r\n  16992 = N 3 360\r\n  16992 = N 5 0\r\n  17568 = N 0 0\r\n  17568
-    = N 1 0\r\n  17664 = N 0 0\r\n  17664 = N 1 0\r\n  17760 = N 0 0\r\n  17760 =
-    N 1 0\r\n  17856 = N 0 0\r\n  17856 = N 1 0\r\n  17952 = N 0 0\r\n  17952 = N
-    1 0\r\n  17976 = N 0 528\r\n  17976 = N 2 528\r\n  17976 = N 5 0\r\n  18528 =
-    N 4 408\r\n  18960 = N 4 0\r\n  18984 = N 3 96\r\n  19104 = N 3 552\r\n  20064
-    = N 0 0\r\n  20064 = N 1 0\r\n  20064 = S 2 672\r\n  20160 = N 1 0\r\n  20160
-    = N 2 0\r\n  20256 = N 1 0\r\n  20256 = N 2 0\r\n  20280 = N 1 144\r\n  20280
-    = N 3 144\r\n  20280 = N 5 0\r\n  20448 = N 1 168\r\n  20448 = N 2 168\r\n  20448
-    = N 5 0\r\n  20640 = N 0 0\r\n  20640 = N 1 0\r\n  20832 = N 3 0\r\n  20856 =
-    N 4 432\r\n  21312 = N 3 0\r\n  21360 = N 4 0\r\n  21360 = N 5 0\r\n  21408 =
-    N 3 552\r\n  22368 = N 0 0\r\n  22368 = N 1 0\r\n  22464 = N 1 0\r\n  22464 =
-    N 2 0\r\n  22560 = N 1 0\r\n  22560 = N 2 0\r\n  22608 = N 1 120\r\n  22608 =
-    N 3 120\r\n  22608 = N 5 0\r\n  22752 = N 1 168\r\n  22752 = N 2 168\r\n  22752
-    = N 5 0\r\n  22944 = N 0 0\r\n  22944 = N 1 0\r\n  23136 = N 2 0\r\n  23184 =
-    N 3 216\r\n  23424 = N 2 0\r\n  23488 = N 3 0\r\n  23488 = N 5 0\r\n  23552 =
-    N 2 0\r\n  23552 = N 5 0\r\n  23616 = N 1 0\r\n  23616 = N 5 0\r\n  23712 = N
-    0 264\r\n  24000 = N 0 0\r\n  24048 = N 1 0\r\n  24096 = N 2 0\r\n  24144 = N
-    3 0\r\n  24192 = N 1 0\r\n  24208 = N 2 0\r\n  24224 = N 3 0\r\n  24240 = N 4
-    0\r\n  24480 = N 3 0\r\n  24576 = N 3 0\r\n  24672 = N 3 0\r\n  24768 = N 3 0\r\n 
-    24864 = N 1 0\r\n  24864 = N 3 0\r\n  24864 = S 2 672\r\n  24888 = N 2 144\r\n 
-    24888 = N 4 144\r\n  24888 = N 5 0\r\n  25056 = N 1 0\r\n  25056 = N 3 0\r\n 
-    25080 = N 2 144\r\n  25080 = N 4 144\r\n  25080 = N 5 0\r\n  25248 = N 1 0\r\n 
-    25248 = N 3 0\r\n  25272 = N 2 144\r\n  25272 = N 4 144\r\n  25272 = N 5 0\r\n 
-    25440 = N 1 456\r\n  25440 = N 3 456\r\n  26016 = N 0 168\r\n  26016 = N 2 168\r\n 
-    26208 = N 0 168\r\n  26208 = N 2 168\r\n  26400 = N 0 96\r\n  26400 = N 2 96\r\n 
-    26528 = N 1 0\r\n  26528 = N 5 0\r\n  26560 = N 2 0\r\n  26592 = N 1 552\r\n 
-    26592 = N 3 552\r\n  26592 = N 5 0\r\n  27648 = N 0 0\r\n  27744 = N 2 168\r\n 
-    27936 = N 2 360\r\n  28320 = N 3 0\r\n  28368 = N 4 120\r\n  28512 = N 4 264\r\n 
-    28800 = N 3 0\r\n  28848 = N 2 0\r\n  28848 = N 5 0\r\n  28944 = N 1 120\r\n 
-    29088 = N 1 360\r\n  29472 = N 3 0\r\n  29520 = N 4 0\r\n  29664 = N 3 264\r\n 
-    29952 = N 2 0\r\n  30000 = N 3 0\r\n  30000 = N 5 0\r\n  30048 = N 1 168\r\n 
-    30048 = N 5 0\r\n  30240 = N 1 264\r\n  30528 = N 0 0\r\n  30576 = N 1 0\r\n 
-    30576 = N 5 0\r\n  30672 = N 3 408\r\n  31104 = N 0 0\r\n  31200 = N 0 0\r\n 
-    31248 = N 1 216\r\n  31248 = N 5 0\r\n  31488 = N 3 0\r\n  31488 = S 2 768\r\n 
-    31536 = N 4 0\r\n  31584 = N 2 0\r\n  31632 = N 3 0\r\n  31680 = N 4 0\r\n  31728
-    = N 2 0\r\n  31776 = N 4 0\r\n  31824 = N 3 0\r\n  31872 = N 2 0\r\n  31920 =
-    N 1 0\r\n  31968 = N 0 0\r\n  32016 = N 3 0\r\n  32064 = N 0 0\r\n  32112 = N
-    2 0\r\n  32160 = N 0 168\r\n  32352 = N 2 72\r\n  32448 = N 2 0\r\n  32544 =
-    N 2 360\r\n  32928 = N 3 0\r\n  32976 = N 4 0\r\n  33120 = N 3 264\r\n  33408
-    = N 2 0\r\n  33456 = N 3 0\r\n  33456 = N 5 0\r\n  33552 = N 1 120\r\n  33696
-    = N 1 360\r\n  34080 = N 3 0\r\n  34128 = N 4 0\r\n  34272 = N 3 216\r\n  34512
-    = N 2 0\r\n  34656 = N 0 168\r\n  34656 = N 1 168\r\n  34848 = N 0 264\r\n  34848
-    = N 1 264\r\n  35232 = N 2 0\r\n  35232 = N 3 0\r\n  35256 = N 3 0\r\n  35256
-    = N 4 0\r\n  35256 = N 5 0\r\n  35424 = N 2 0\r\n  35424 = N 3 0\r\n  35448 =
-    N 3 0\r\n  35448 = N 4 0\r\n  35448 = N 5 0\r\n  35616 = N 2 0\r\n  35616 = N
-    3 0\r\n  35640 = N 3 144\r\n  35640 = N 4 144\r\n  35640 = N 5 0\r\n  35808 =
-    N 3 0\r\n  35808 = N 4 0\r\n  35832 = N 0 528\r\n  35832 = N 1 528\r\n  35832
-    = N 5 0\r\n  36480 = N 4 0\r\n  36528 = N 3 0\r\n  36576 = N 2 0\r\n  36624 =
-    N 1 0\r\n  36672 = N 3 0\r\n  36720 = N 2 0\r\n  36768 = N 1 0\r\n  36816 = N
-    0 0\r\n  36864 = N 2 0\r\n  36912 = N 1 0\r\n  36960 = N 0 0\r\n  37248 = N 4
-    168\r\n  37440 = N 3 72\r\n  37440 = N 5 0\r\n  37536 = N 3 456\r\n  38496 =
-    N 0 0\r\n  38496 = N 1 0\r\n  38592 = N 1 0\r\n  38592 = N 2 0\r\n  38688 = N
-    1 0\r\n  38688 = N 2 0\r\n  38712 = N 1 144\r\n  38712 = N 3 144\r\n  38712 =
-    N 5 0\r\n  38880 = N 1 168\r\n  38880 = N 2 168\r\n  38880 = N 5 0\r\n  39072
-    = N 0 0\r\n  39072 = N 1 0\r\n  39264 = N 4 456\r\n  39264 = S 2 672\r\n  39744
-    = N 3 72\r\n  39840 = N 3 456\r\n  40800 = N 0 0\r\n  40800 = N 1 0\r\n  40896
-    = N 1 0\r\n  40896 = N 2 0\r\n  40992 = N 1 0\r\n  40992 = N 2 0\r\n  41040 =
-    N 1 120\r\n  41040 = N 3 120\r\n  41040 = N 5 0\r\n  41184 = N 1 168\r\n  41184
-    = N 2 168\r\n  41184 = N 5 0\r\n  41376 = N 0 0\r\n  41376 = N 1 0\r\n  41568
-    = N 2 0\r\n  41616 = N 3 216\r\n  41856 = N 2 0\r\n  41920 = N 3 0\r\n  41920
-    = N 5 0\r\n  41984 = N 2 0\r\n  41984 = N 5 0\r\n  42048 = N 1 0\r\n  42048 =
-    N 5 0\r\n  42144 = N 0 544\r\n  42912 = N 3 0\r\n  43008 = N 3 0\r\n  43104 =
-    N 3 0\r\n  43296 = N 1 0\r\n  43296 = N 3 0\r\n  43344 = N 2 128\r\n  43344 =
-    N 4 120\r\n  43344 = N 5 0\r\n  43488 = N 1 0\r\n  43488 = N 3 0\r\n  43512 =
-    N 2 144\r\n  43512 = N 4 144\r\n  43512 = N 5 0\r\n  43680 = N 1 72\r\n  43680
-    = N 3 72\r\n  43680 = N 5 0\r\n  43776 = N 0 372\r\n  43776 = N 2 372\r\n  43776
-    = N 5 0\r\n  44160 = N 1 72\r\n  44256 = N 2 72\r\n  44256 = N 5 0\r\n  44352
-    = N 3 0\r\n  44352 = N 5 0\r\n  44364 = N 4 72\r\n  44448 = N 3 552\r\n  44448
-    = N 5 0\r\n  45024 = N 0 2280\r\n  45072 = N 1 2232\r\n  45120 = N 2 2184\r\n 
-    45168 = N 4 2136\r\n  47328 = N 3 744\r\n  47328 = N 6 0\r\n  47616 = N 2 168\r\n 
-    47616 = N 6 0\r\n  47808 = N 1 0\r\n  47808 = N 6 0\r\n  47904 = N 0 1272\r\n 
-    47904 = N 6 0\r\n  48096 = N 2 552\r\n  48096 = N 6 0\r\n  48672 = N 4 1224\r\n 
-    48672 = N 6 0\r\n  49200 = N 1 0\r\n  49200 = N 6 0\r\n  49248 = N 2 648\r\n 
-    49248 = N 6 0\r\n}\r\n"
---- !u!222 &538804565
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538804562}
-  m_CullTransparentMesh: 1
 --- !u!1 &557474723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,8 +1621,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 538804563}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1906,13 +1685,11 @@ MonoBehaviour:
   - {fileID: 4626359991842112, guid: 01b9310d07202bd43aae6dead229c865, type: 3}
   - {fileID: 4014135116710048, guid: 43388091a96bce747b5c4c4f122ae893, type: 3}
   - {fileID: 4413157362768838, guid: 86d778fe174d8eb4488e45e7189f9b26, type: 3}
-  Path: 
   CameraMovement: {fileID: 1838201408}
   Music: {fileID: 1152179206}
   StarPowerPrefab: {fileID: 4109334711829988, guid: 11bbda1d49dc14b489fa8a659b8ad58c, type: 3}
   SectionPrefab: {fileID: 4622555703069306, guid: c851ea94b3f3a3e4cb465aa97217e19d, type: 3}
   BpmPrefab: {fileID: 4322006517868176, guid: 44c73da133c080a4fbf59de2fd61ac91, type: 3}
-  HpText: {fileID: 538804564}
 --- !u!1 &1017773846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,7 +1762,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8244dbfbadee414d80f411f2861a23e, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.48235294, g: 0.18431373, b: 0.18431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2021,7 +1798,7 @@ Transform:
   m_GameObject: {fileID: 1081942291}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.2, y: 0, z: 10}
-  m_LocalScale: {x: 8, y: 70.7085, z: 1}
+  m_LocalScale: {x: 3, y: 9, z: 1}
   m_Children: []
   m_Father: {fileID: 1838201407}
   m_RootOrder: 5
@@ -2066,8 +1843,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c8244dbfbadee414d80f411f2861a23e, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f54a4ea8792b14d7ea720d0602cae9f9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2113,7 +1890,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 33a87a68420174dcd8f8dd4a8376e0ef, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a8852da12211b42b68aefbd90dd3e883, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2285,7 +2062,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8244dbfbadee414d80f411f2861a23e, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.4811321, g: 0.18382877, b: 0.18382877, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
