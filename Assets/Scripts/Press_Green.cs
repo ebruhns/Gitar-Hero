@@ -15,7 +15,8 @@ public class Press_Green : MonoBehaviour
     public ChartLoaderTest chartLoaderTest;
     bool active = false;
     GameObject note;
-   
+    bool isHammer = false;
+
 
 
     // Create audio object for C note
@@ -36,14 +37,23 @@ public class Press_Green : MonoBehaviour
             //button is press
             spriteRenderer.sprite = newSprite;
             canStrum = true;
-            
-     	}
+            if (active && isHammer)
+            {
+                notePlayed();
+            }
+
+        }
      	else if (context.canceled)
      	{
             //button is released
             spriteRenderer.sprite = originalSprite;
             canStrum = false;
         }
+    }
+
+    public void notePlayed()
+    {
+        Destroy(note);
     }
 
 
@@ -55,6 +65,16 @@ public class Press_Green : MonoBehaviour
         {
             note = col.gameObject;
             active = true;
+            if (note.tag == "Hammer")
+            {
+                isHammer = true;
+                
+            }
+            else
+            {
+                isHammer = false;
+            }
+
         }
 
     }

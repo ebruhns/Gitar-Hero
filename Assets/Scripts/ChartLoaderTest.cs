@@ -197,7 +197,17 @@ public class ChartLoaderTest : MonoBehaviour {
                 if (note.ButtonIndexes[i])
                 {
                     noteTmp = SpawnPrefab(SolidNotes[i], transform, new Vector3(i - 1.25f, 0, z));
-                    noteTmp.tag = "Note";
+                    if (note.IsHammerOn)
+                    {
+                        noteTmp.tag = "Hammer";
+                     
+                    }
+                    else
+                    {
+                        noteTmp.tag = "Note";
+                    }
+                    
+                    
                     Rigidbody rb = noteTmp.gameObject.AddComponent<Rigidbody>();
                     rb.useGravity = false;
                     SphereCollider sc = noteTmp.gameObject.AddComponent<SphereCollider>();

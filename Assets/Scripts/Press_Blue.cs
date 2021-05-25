@@ -34,14 +34,27 @@ public class Press_Blue : MonoBehaviour
         {
             note = col.gameObject;
             active = true;
-            // check if note is hammer on
+            if(note.tag == "Hammer")
+            {
+                isHammer = true;
+                
+            }
+            else
+            {
+                isHammer = false;
+            }
+           
         }
-
         
     }
     public void OnTriggerExit(Collider col)
     {
         active = false;
+    }
+
+    public void notePlayed()
+    {
+        Destroy(note);
     }
 
     public void Onpress_blue(InputAction.CallbackContext context){
@@ -52,7 +65,7 @@ public class Press_Blue : MonoBehaviour
             canStrum = true;
             if(active && isHammer)
             {
-                Destroy(note);
+                notePlayed();
             }
         }
      	else if (context.canceled)
@@ -73,7 +86,7 @@ public class Press_Blue : MonoBehaviour
             }
             else if(canStrum && active)
             {
-                Destroy(note);
+                notePlayed();
             }
         }
         else if (context.canceled)

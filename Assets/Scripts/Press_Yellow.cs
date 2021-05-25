@@ -12,6 +12,7 @@ public class Press_Yellow : MonoBehaviour
     public bool canStrum = false;
     bool active = false;
     GameObject note;
+    bool isHammer = false;
 
 
     // Create audio object for E note
@@ -31,6 +32,10 @@ public class Press_Yellow : MonoBehaviour
             //button is press
             spriteRenderer.sprite = newSprite;
             canStrum = true;
+            if (active && isHammer)
+            {
+                notePlayed();
+            }
         }
         else if (context.canceled)
         {
@@ -51,7 +56,7 @@ public class Press_Yellow : MonoBehaviour
             }
             else if (canStrum && active)
             {
-                Destroy(note);
+                notePlayed();
             }
         }
         else if (context.canceled)
@@ -62,16 +67,29 @@ public class Press_Yellow : MonoBehaviour
             }
         }
     }
+
+    public void notePlayed()
+    {
+        Destroy(note);
+    }
     public void OnTriggerEnter(Collider col)
     {
 
         if (col.gameObject.name == "Yellow Note(Clone)")
         {
-           
             note = col.gameObject;
             active = true;
-        }
+            if (note.tag == "Hammer")
+            {
+                isHammer = true;
+                
+            }
+            else
+            {
+                isHammer = false;
+            }
 
+        }
 
     }
     public void OnTriggerExit(Collider col)
