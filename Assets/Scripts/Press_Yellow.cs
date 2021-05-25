@@ -67,7 +67,7 @@ public class Press_Yellow : MonoBehaviour
 
         if (col.gameObject.name == "Yellow Note(Clone)")
         {
-            print("Yellow note");
+           
             note = col.gameObject;
             active = true;
         }

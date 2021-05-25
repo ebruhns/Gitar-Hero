@@ -12,6 +12,7 @@ public class Press_Blue : MonoBehaviour
     public bool canStrum = false;
     bool active = false;
     GameObject note;
+    bool isHammer = false;
 
     //Create Audio source for F note
     public AudioSource fNote;
@@ -31,9 +32,9 @@ public class Press_Blue : MonoBehaviour
         
         if (col.gameObject.name == "Blue Note(Clone)")
         {
-            print("blue note");
             note = col.gameObject;
             active = true;
+            // check if note is hammer on
         }
 
         
@@ -49,6 +50,10 @@ public class Press_Blue : MonoBehaviour
          //button is press
      		spriteRenderer.sprite = newSprite;
             canStrum = true;
+            if(active && isHammer)
+            {
+                Destroy(note);
+            }
         }
      	else if (context.canceled)
      	{
