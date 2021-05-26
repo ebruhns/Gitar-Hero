@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 48eecc4210ecb4f9688ed4bd30903d10
+  - enabled: 1
+    path: Assets/Scenes/YDB.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/SleepWalk.unity
+    guid: b499b0829c7b841d08aa33f42d41dfc9
+  - enabled: 1
+    path: Assets/Scenes/DayNNite.unity
+    guid: d513e9e7366c9402097a4ddfb68f17bd
   m_configObjects: {}

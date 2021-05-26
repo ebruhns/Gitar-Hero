@@ -7,9 +7,19 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     
-	public void PlayGame()
+	public void PlaySleepWalk()
 	{
-		SceneManager.LoadScene("SampleScene");
+		SceneManager.LoadScene("SleepWalk");
+	}
+
+	public void PlayDayNNite()
+	{
+		SceneManager.LoadScene("DayNNite");
+	}
+
+	public void PlayYDB()
+	{
+		SceneManager.LoadScene("YDB");
 	}
 
 	public void QuitGame()
