@@ -33,6 +33,7 @@ public class ChartLoaderTest : MonoBehaviour {
     public Transform StarPowerPrefab;
     public Transform SectionPrefab;
     public Transform BpmPrefab;
+    bool appliedLast = false;
 
 	void Start ()
     {
@@ -194,7 +195,8 @@ public class ChartLoaderTest : MonoBehaviour {
     {
         Transform noteTmp;
         float z;
-
+        int count = 0;
+        int length = notes.Length;
         foreach (Note note in notes)
         {
             //note.tag = "Note";
@@ -204,10 +206,20 @@ public class ChartLoaderTest : MonoBehaviour {
                 if (note.ButtonIndexes[i])
                 {
                     noteTmp = SpawnPrefab(SolidNotes[i], transform, new Vector3(i - 1.25f, 0, z));
-                    if (note.IsHammerOn)
+                    if (note.IsHammerOn && length == count+1 && !appliedLast)
+                    {
+                        noteTmp.tag = "LastHammer";
+                        appliedLast = true;
+                     
+                    }
+                    else if (length == count+1 && !appliedLast)
+                    {
+                        noteTmp.tag = "Last";
+                        appliedLast = true;
+                    }
+                    else if (note.IsHammerOn)
                     {
                         noteTmp.tag = "Hammer";
-                     
                     }
                     else
                     {
@@ -226,7 +238,9 @@ public class ChartLoaderTest : MonoBehaviour {
                         SetHammerOnColor(noteTmp, (note.IsHammerOn && !note.IsChord && !note.ForcedSolid));
                 }
             }
+            count++;
         }
+        appliedLast = false;
     }
 	
     /// <summary>

@@ -13,7 +13,7 @@ public class Press_Yellow : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
-
+    bool songEnd = false;
 
     // Create audio object for E note
     public AudioSource eNote;
@@ -23,6 +23,13 @@ public class Press_Yellow : MonoBehaviour
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if (active) { }
+    }
+
+    public bool songEnded()
+    {
+        // do something
+        print("song ended");
+        return songEnd;
     }
 
     public void Onpress_yellow(InputAction.CallbackContext context)
@@ -79,14 +86,21 @@ public class Press_Yellow : MonoBehaviour
         {
             note = col.gameObject;
             active = true;
-            if (note.tag == "Hammer")
+            if (note.tag == "Hammer" || note.tag == "LastHammer")
             {
                 isHammer = true;
-                
+
             }
             else
             {
                 isHammer = false;
+            }
+
+            if (note.tag == "Last" || note.tag == "LastHammer")
+            {
+                songEnd = true;
+                songEnded();
+                songEnd = false;
             }
 
         }

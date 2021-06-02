@@ -11,7 +11,9 @@ public class Press_Red : MonoBehaviour
     public bool canStrum = false;
     bool active = false;
     GameObject note;
+
     bool isHammer = false;
+    bool songEnd = false;
 
 
     // Create audio object for E note
@@ -24,6 +26,13 @@ public class Press_Red : MonoBehaviour
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if (active) { }
         
+    }
+
+    public bool songEnded()
+    {
+        // do something
+        print("song ended");
+        return songEnd;
     }
 
     public void Onpress_red(InputAction.CallbackContext context){
@@ -78,14 +87,21 @@ public class Press_Red : MonoBehaviour
         {
             note = col.gameObject;
             active = true;
-            if (note.tag == "Hammer")
+            if (note.tag == "Hammer" || note.tag == "LastHammer")
             {
                 isHammer = true;
-                
+
             }
             else
             {
                 isHammer = false;
+            }
+
+            if (note.tag == "Last" || note.tag == "LastHammer")
+            {
+                songEnd = true;
+                songEnded();
+                songEnd = false;
             }
 
         }

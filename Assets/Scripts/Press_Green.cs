@@ -16,6 +16,7 @@ public class Press_Green : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
+    bool songEnd = false;
 
 
 
@@ -29,6 +30,13 @@ public class Press_Green : MonoBehaviour
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
        
+    }
+
+    public bool songEnded()
+    {
+        // do something
+        print("song ended");
+        return songEnd;
     }
 
     public void Onpress_green(InputAction.CallbackContext context){
@@ -65,14 +73,20 @@ public class Press_Green : MonoBehaviour
         {
             note = col.gameObject;
             active = true;
-            if (note.tag == "Hammer")
+            if (note.tag == "Hammer" || note.tag == "LastHammer")
             {
                 isHammer = true;
-                
+
             }
             else
             {
                 isHammer = false;
+            }
+
+            if (note.tag == "Last" || note.tag == "LastHammer")
+            {
+                songEnd = true;
+                songEnded();
             }
 
         }

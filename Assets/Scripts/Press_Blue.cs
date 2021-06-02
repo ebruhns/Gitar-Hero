@@ -13,6 +13,7 @@ public class Press_Blue : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
+    bool songEnd = false;
 
     //Create Audio source for F note
     public AudioSource fNote;
@@ -25,7 +26,12 @@ public class Press_Blue : MonoBehaviour
         if (active) { }
     }
 
-
+    public bool songEnded()
+    {
+        // do something
+        print("song ended");
+        return songEnd;
+    }
 
     public void OnTriggerEnter(Collider col)
     {
@@ -34,7 +40,7 @@ public class Press_Blue : MonoBehaviour
         {
             note = col.gameObject;
             active = true;
-            if(note.tag == "Hammer")
+            if(note.tag == "Hammer" || note.tag == "LastHammer")
             {
                 isHammer = true;
                 
@@ -42,6 +48,13 @@ public class Press_Blue : MonoBehaviour
             else
             {
                 isHammer = false;
+            }
+
+            if(note.tag =="Last" || note.tag == "LastHammer")
+            {
+                songEnd = true;
+                songEnded();
+                songEnd = false;
             }
            
         }
