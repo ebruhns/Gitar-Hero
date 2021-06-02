@@ -115,3 +115,51 @@ System memory in use after: 116.3 MB.
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1941.
 Total: 1.963873 ms (FindLiveObjects: 0.215153 ms CreateObjectMapping: 0.046107 ms MarkObjects: 1.687521 ms  DeleteObjects: 0.013810 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 4012.735761 seconds.
+  path: Assets/ChartLoader/ChartLoader/Songs/takeItEasy.ogg
+  artifactKey: Guid(1ae7517b2f3f54be5b52c513b965ecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ChartLoader/ChartLoader/Songs/takeItEasy.ogg using Guid(1ae7517b2f3f54be5b52c513b965ecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd31a44134b28de2ff3ac260a6996ec0') in 0.776160 seconds
+  Import took 0.885127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.040495 seconds.
+  path: Assets/Scenes/takeItEasy.unity
+  artifactKey: Guid(e6ba4ac198b924e388cece43a8a3d2db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/takeItEasy.unity using Guid(e6ba4ac198b924e388cece43a8a3d2db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53236c68258289d1eaf14b3588e2c5cd') in 0.002794 seconds
+  Import took 0.008372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.181239 seconds.
+  path: Assets/Scripts/ChartLoaderTest.cs
+  artifactKey: Guid(1678a9349ecad304888edad26a04be52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ChartLoaderTest.cs using Guid(1678a9349ecad304888edad26a04be52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53a0625529d2e0aa10d1d137be3dcc8') in 0.014641 seconds
+  Import took 0.018277 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000926 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.189 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1458 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.4 MB.
+System memory in use after: 153.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1953.
+Total: 4.411326 ms (FindLiveObjects: 0.707893 ms CreateObjectMapping: 0.209916 ms MarkObjects: 3.460169 ms  DeleteObjects: 0.028362 ms)
+
