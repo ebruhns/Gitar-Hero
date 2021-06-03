@@ -11,6 +11,7 @@ public class Press_Red : MonoBehaviour
     public bool canStrum = false;
     bool active = false;
     GameObject note;
+    public ScoreCounter scoreCounter;
 
     bool isHammer = false;
     bool songEnd = false;
@@ -24,7 +25,7 @@ public class Press_Red : MonoBehaviour
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        if (active) { }
+       
         
     }
 
@@ -65,7 +66,7 @@ public class Press_Red : MonoBehaviour
             }
             else if (canStrum && active)
             {
-                Destroy(note);
+                notePlayed();
             }
         }
         else if (context.canceled)
@@ -78,6 +79,8 @@ public class Press_Red : MonoBehaviour
     }
     public void notePlayed()
     {
+        active = false;
+        scoreCounter.increaseScore();
         Destroy(note);
     }
     public void OnTriggerEnter(Collider col)
@@ -110,5 +113,6 @@ public class Press_Red : MonoBehaviour
     public void OnTriggerExit(Collider col)
     {
         active = false;
+        scoreCounter.brokenStreak();
     }
 }

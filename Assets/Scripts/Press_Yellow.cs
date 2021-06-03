@@ -14,6 +14,7 @@ public class Press_Yellow : MonoBehaviour
     GameObject note;
     bool isHammer = false;
     bool songEnd = false;
+    public ScoreCounter scoreCounter;
 
     // Create audio object for E note
     public AudioSource eNote;
@@ -22,7 +23,7 @@ public class Press_Yellow : MonoBehaviour
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        if (active) { }
+     
     }
 
     public bool songEnded()
@@ -77,8 +78,11 @@ public class Press_Yellow : MonoBehaviour
 
     public void notePlayed()
     {
+        active = false;
+        scoreCounter.increaseScore();
         Destroy(note);
     }
+
     public void OnTriggerEnter(Collider col)
     {
 
@@ -109,5 +113,6 @@ public class Press_Yellow : MonoBehaviour
     public void OnTriggerExit(Collider col)
     {
         active = false;
+        scoreCounter.brokenStreak();
     }
 }

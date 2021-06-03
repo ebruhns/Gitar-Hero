@@ -18,12 +18,13 @@ public class Press_Blue : MonoBehaviour
     //Create Audio source for F note
     public AudioSource fNote;
     private bool isFreestyle = false;
+    public ScoreCounter scoreCounter;
 
 
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        if (active) { }
+       
     }
 
     public bool songEnded()
@@ -33,6 +34,56 @@ public class Press_Blue : MonoBehaviour
         return songEnd;
     }
 
+    public void Onpress_blue(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            //button is press
+            spriteRenderer.sprite = newSprite;
+            canStrum = true;
+            if (active && isHammer)
+            {
+                notePlayed();
+            }
+        }
+        else if (context.canceled)
+        {
+            //button is released
+            spriteRenderer.sprite = originalSprite;
+
+            canStrum = false;
+        }
+    }
+    public void On_strum(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            //Only play audio if user is in freestyle mode
+            if (isFreestyle && canStrum)
+            {
+                fNote.Play();
+            }
+            else if (canStrum && active)
+            {
+                notePlayed();
+            }
+        }
+        else if (context.canceled)
+        {
+            if (isFreestyle)
+            {
+                fNote.Stop();
+            }
+        }
+    }
+
+
+    public void notePlayed()
+    {
+        active = false;
+        scoreCounter.increaseScore();
+        Destroy(note);
+    }
     public void OnTriggerEnter(Collider col)
     {
         
@@ -63,51 +114,11 @@ public class Press_Blue : MonoBehaviour
     public void OnTriggerExit(Collider col)
     {
         active = false;
+        scoreCounter.brokenStreak();
     }
 
-    public void notePlayed()
-    {
-        Destroy(note);
-    }
 
-    public void Onpress_blue(InputAction.CallbackContext context){
-    	if (context.started)
-     	{
-         //button is press
-     		spriteRenderer.sprite = newSprite;
-            canStrum = true;
-            if(active && isHammer)
-            {
-                notePlayed();
-            }
-        }
-     	else if (context.canceled)
-     	{
-         //button is released
-     		spriteRenderer.sprite = originalSprite;
 
-            canStrum = false;
-        }
-    }
-    public void On_strum(InputAction.CallbackContext context){
-        if (context.started)
-        {
-                //Only play audio if user is in freestyle mode
-            if (isFreestyle && canStrum)
-            {
-                fNote.Play();
-            }
-            else if(canStrum && active)
-            {
-                notePlayed();
-            }
-        }
-        else if (context.canceled)
-        {
-            if (isFreestyle)
-            {
-                fNote.Stop();
-            }
-        }
-    }
+
+
 }

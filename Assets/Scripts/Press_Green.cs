@@ -17,19 +17,17 @@ public class Press_Green : MonoBehaviour
     GameObject note;
     bool isHammer = false;
     bool songEnd = false;
-
+    public ScoreCounter scoreCounter;
 
 
     // Create audio object for C note
     public AudioSource cNote;
-    
     private bool isFreestyle = false;
    
 
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-       
     }
 
     public bool songEnded()
@@ -59,9 +57,35 @@ public class Press_Green : MonoBehaviour
         }
     }
 
+    public void On_strum(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            //Only play audio if user is in freestyle mode
+            if (isFreestyle && canStrum)
+            {
+                cNote.Play();
+
+            }
+            else if (canStrum && active)
+            {
+                notePlayed();
+            }
+        }
+        else if (context.canceled)
+        {
+            if (isFreestyle)
+            {
+                cNote.Stop();
+            }
+        }
+    }
+
     public void notePlayed()
     {
-        Destroy(note);
+        active = false;
+        scoreCounter.increaseScore();
+        Destroy(note);  
     }
 
 
@@ -95,29 +119,9 @@ public class Press_Green : MonoBehaviour
     public void OnTriggerExit(Collider col)
     {
         active = false;
+        scoreCounter.brokenStreak();
     }
 
 
-    public void On_strum(InputAction.CallbackContext context){
-        if (context.started)
-        {
-                //Only play audio if user is in freestyle mode
-            if (isFreestyle && canStrum)
-            {
-                cNote.Play();
-               
-            }
-            else if (canStrum && active)
-            {
-                Destroy(note);
-            }
-        }
-        else if (context.canceled)
-        {
-            if (isFreestyle)
-            {
-                cNote.Stop();
-            }
-        }
-    }
+
 }
