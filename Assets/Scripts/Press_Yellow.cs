@@ -13,7 +13,8 @@ public class Press_Yellow : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
-  
+    public ParticleSystem particleSystem;
+
     public ScoreCounter scoreCounter;
 
     // Create audio object for E note
@@ -23,7 +24,8 @@ public class Press_Yellow : MonoBehaviour
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-     
+        ParticleSystem particleSystem = gameObject.GetComponent<ParticleSystem>();
+
     }
 
     public void songEnded()
@@ -82,6 +84,7 @@ public class Press_Yellow : MonoBehaviour
     {
         active = false;
         scoreCounter.increaseScore();
+        particleSystem.Play();
         scoreCounter.increaseTotalNotes();
         Destroy(note);
     }

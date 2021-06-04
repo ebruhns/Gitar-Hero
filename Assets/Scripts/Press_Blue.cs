@@ -13,17 +13,23 @@ public class Press_Blue : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
-    
+    //public GameObject ParticleSystem;
+
 
     //Create Audio source for F note
     public AudioSource fNote;
     private bool isFreestyle = false;
     public ScoreCounter scoreCounter;
+    public ParticleSystem particleSystem;
+
+
+
 
 
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        ParticleSystem particleSystem = gameObject.GetComponent<ParticleSystem>();
        
     }
 
@@ -83,6 +89,7 @@ public class Press_Blue : MonoBehaviour
     public void notePlayed()
     {
         active = false;
+        particleSystem.Play();
         scoreCounter.increaseScore();
         scoreCounter.increaseTotalNotes();
         Destroy(note);

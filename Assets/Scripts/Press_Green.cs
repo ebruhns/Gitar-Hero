@@ -16,7 +16,9 @@ public class Press_Green : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
- 
+    public ParticleSystem particleSystem;
+
+
     public ScoreCounter scoreCounter;
 
 
@@ -28,6 +30,7 @@ public class Press_Green : MonoBehaviour
     void Start()
     {
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        ParticleSystem particleSystem = gameObject.GetComponent<ParticleSystem>();
     }
 
     public void songEnded()
@@ -87,6 +90,7 @@ public class Press_Green : MonoBehaviour
     {
         active = false;
         scoreCounter.increaseScore();
+        particleSystem.Play();
         scoreCounter.increaseTotalNotes();
         Destroy(note);  
     }
