@@ -350,10 +350,7 @@ public class ChartLoaderTest : MonoBehaviour {
         PlayMusic();
     }
 
-    public void CheckGreen()
-    {
-        print("hello");
-    }
+  
 
     /// <summary>
     /// Plays the current song.
@@ -391,7 +388,8 @@ public class ChartLoaderTest : MonoBehaviour {
     private void SetLongNoteScale(Transform note, float length)
     {
 
-        note.localScale = new Vector3(note.localScale.x, note.localScale.y, length);
+        // deleting note tails for now lol 
+        //note.localScale = new Vector3(note.localScale.x, note.localScale.y, length);
     }
 
     /// <summary>
