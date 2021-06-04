@@ -16,7 +16,7 @@ public class Press_Green : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
-    bool songEnd = false;
+ 
     public ScoreCounter scoreCounter;
 
 
@@ -30,11 +30,9 @@ public class Press_Green : MonoBehaviour
     	spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    public bool songEnded()
+    public void songEnded()
     {
-        // do something
-        print("song ended");
-        return songEnd;
+        scoreCounter.songEndedHelper();
     }
 
     public void Onpress_green(InputAction.CallbackContext context){
@@ -71,6 +69,10 @@ public class Press_Green : MonoBehaviour
             {
                 notePlayed();
             }
+            else if (canStrum && !active)
+            {
+                scoreCounter.brokenStreak();
+            }
         }
         else if (context.canceled)
         {
@@ -85,6 +87,7 @@ public class Press_Green : MonoBehaviour
     {
         active = false;
         scoreCounter.increaseScore();
+        scoreCounter.increaseTotalNotes();
         Destroy(note);  
     }
 
@@ -109,7 +112,7 @@ public class Press_Green : MonoBehaviour
 
             if (note.tag == "Last" || note.tag == "LastHammer")
             {
-                songEnd = true;
+                
                 songEnded();
             }
 
@@ -120,6 +123,7 @@ public class Press_Green : MonoBehaviour
     {
         active = false;
         scoreCounter.brokenStreak();
+        scoreCounter.increaseTotalNotes();
     }
 
 

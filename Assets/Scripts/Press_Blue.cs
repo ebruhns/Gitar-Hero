@@ -13,7 +13,7 @@ public class Press_Blue : MonoBehaviour
     bool active = false;
     GameObject note;
     bool isHammer = false;
-    bool songEnd = false;
+    
 
     //Create Audio source for F note
     public AudioSource fNote;
@@ -27,11 +27,9 @@ public class Press_Blue : MonoBehaviour
        
     }
 
-    public bool songEnded()
+    public void songEnded()
     {
-        // do something
-        print("song ended");
-        return songEnd;
+        scoreCounter.songEndedHelper();
     }
 
     public void Onpress_blue(InputAction.CallbackContext context)
@@ -67,6 +65,10 @@ public class Press_Blue : MonoBehaviour
             {
                 notePlayed();
             }
+            else if (canStrum && !active)
+            {
+                scoreCounter.brokenStreak();
+            }
         }
         else if (context.canceled)
         {
@@ -82,6 +84,7 @@ public class Press_Blue : MonoBehaviour
     {
         active = false;
         scoreCounter.increaseScore();
+        scoreCounter.increaseTotalNotes();
         Destroy(note);
     }
     public void OnTriggerEnter(Collider col)
@@ -103,9 +106,9 @@ public class Press_Blue : MonoBehaviour
 
             if(note.tag =="Last" || note.tag == "LastHammer")
             {
-                songEnd = true;
+                
                 songEnded();
-                songEnd = false;
+               
             }
            
         }
@@ -115,10 +118,8 @@ public class Press_Blue : MonoBehaviour
     {
         active = false;
         scoreCounter.brokenStreak();
+        scoreCounter.increaseTotalNotes();
     }
-
-
-
 
 
 }
