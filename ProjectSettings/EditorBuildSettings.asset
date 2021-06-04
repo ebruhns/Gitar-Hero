@@ -17,4 +17,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DayNNite.unity
     guid: d513e9e7366c9402097a4ddfb68f17bd
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/AllYouNeed.unity
+    guid: bfb321a3fdf8e4001b2f8744a6e1e1ce
+  - enabled: 1
+    path: Assets/Scenes/hotelCali.unity
+    guid: e6ba4ac198b924e388cece43a8a3d2db
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: cec2d2c1455ce46b9b94994b520c56b1
+  - enabled: 1
+    path: Assets/Scenes/stairway2Heaven.unity
+    guid: 0299ab8d8b3f14a528a9950781355533
+  - enabled: 1
+    path: Assets/Scenes/WeWillRockYou.unity
+    guid: a5c292ecafadc4201b2f56c8fcaf93ba
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 99389f713211c44eeaaa20bfb866a36d, type: 2}
