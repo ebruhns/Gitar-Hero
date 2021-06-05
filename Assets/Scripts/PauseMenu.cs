@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenuUI;
 
     // Update is called once per frame
-   public void Onpress_escape(InputAction.CallbackContext context)
+  /* public void Onpress_escape(InputAction.CallbackContext context)
    {
   		if (GameIsPaused)
   			{
@@ -54,8 +54,11 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void QuitGame()
     {
       Application.Quit();
-    }
+    }*/
 }

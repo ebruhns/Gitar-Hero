@@ -6,9 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
+    void start()
+    {
+		PlayerPrefs.SetInt("Score", 0);
+		PlayerPrefs.SetInt("Percent", 0);
+
+		PlayerPrefs.SetInt("Streak", 0);
+
+	}
 	public void PlaySleepWalk()
 	{
+		//SceneManager.LoadScene("ScoreScene");
 		SceneManager.LoadScene("SleepWalk");
 	}
 

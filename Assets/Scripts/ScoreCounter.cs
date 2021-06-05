@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class ScoreCounter : MonoBehaviour
@@ -16,6 +17,7 @@ public class ScoreCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         score = 0;
         streak = 0;
         streak_multiplier = 1;
@@ -24,9 +26,10 @@ public class ScoreCounter : MonoBehaviour
         double val = 2.0 / 3.0 * 100.0;
         print(val);
         int test = Mathf.RoundToInt((float)val);
-        
-        print(test);
-        
+       
+  
+
+
     }
 
 
@@ -37,28 +40,29 @@ public class ScoreCounter : MonoBehaviour
 
     public void increaseScore()
     {
-        print("score increased");
+        
         score++;
+        print(streak);
         streak++;
-        if(streak > 10)
+        if(streak == 10)
         {
             streak_multiplier = 2;
+            print("hi");
+
         }
-        if (streak > 20)
+        if (streak== 20)
         {
             streak_multiplier = 3;
+ 
         }
-        if (streak > 40)
+        if (streak == 40)
         {
             streak_multiplier = 4;
+
         }
         final_score += (25 * streak_multiplier);
 
-        print("score: " + score);
-        print("streak: " + streak);
-        print("streak_multiplier " + streak_multiplier);
-        print("longest_streak: " + longest_streak);
-        print("final score: " + final_score);
+ 
 
     }
 
@@ -68,6 +72,7 @@ public class ScoreCounter : MonoBehaviour
         {
             longest_streak = streak;
         }
+      
         streak = 0;
         streak_multiplier = 1;
     }
@@ -84,6 +89,15 @@ public class ScoreCounter : MonoBehaviour
         double tempPercentage = (score / total_notes ) * 100.0;
         int finalPercent = Mathf.RoundToInt((float)tempPercentage);
         print("final percentage: "+finalPercent+"%");
+
+        PlayerPrefs.SetInt("Score", final_score);
+        PlayerPrefs.SetInt("Percent", finalPercent); 
+
+        PlayerPrefs.SetInt("Streak", longest_streak);
+
+        SceneManager.LoadScene("ScoreScene");
+
+
 
 
     }

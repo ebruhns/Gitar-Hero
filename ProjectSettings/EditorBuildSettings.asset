@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WeWillRockYou.unity
     guid: a5c292ecafadc4201b2f56c8fcaf93ba
+  - enabled: 1
+    path: Assets/Scenes/ScoreScene.unity
+    guid: 27581d3bd710842408d3600340a4acef
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 99389f713211c44eeaaa20bfb866a36d, type: 2}
