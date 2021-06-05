@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ScoreCounter : MonoBehaviour
 {
@@ -82,6 +84,7 @@ public class ScoreCounter : MonoBehaviour
         double tempPercentage = (score / total_notes ) * 100.0;
         int finalPercent = Mathf.RoundToInt((float)tempPercentage);
         print("final percentage: "+finalPercent+"%");
+
 
     }
 
