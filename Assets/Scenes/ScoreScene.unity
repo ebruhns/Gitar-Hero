@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a99aab141c71004e89aaae304561802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox: {fileID: 0}
+  textbox: {fileID: 1195245199}
 --- !u!114 &1195245199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b320e4b6f11603348ae8144fc4bc050f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox: {fileID: 0}
+  textbox: {fileID: 1358539475}
 --- !u!114 &1358539475
 MonoBehaviour:
   m_ObjectHideFlags: 0
